@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+	int t;
+	cin >> t;
+	while(t--)
+	{
+	    int n, m, i, j, count1 = 0, count2 = 0;
+	    string str[100];
+	    cin >> n >> m;
+	    for(i = 0; i < n; i++)
+	        cin >> str[i];
+	    for(i = 0; i < n; i++)
+	    {
+	        for(j = 0; j < m; j++)
+	        {
+	            if((i + j) % 2 == 0 && str[i][j] == 'R')
+	                count1 += 5;
+	            else if((i + j) % 2 == 0 && str[i][j] == 'G')
+	                count2 += 3;
+	            else if((i + j) % 2 == 1 && str[i][j] == 'R')
+	                count2 += 5;
+	            else if((i + j) % 2 == 1 && str[i][j] == 'G')
+	                count1 +=3;
+	        }
+	    }
+	    if(count1 < count2)
+	        cout << count1 << "\n";
+	    else
+	        cout << count2 << "\n";
+	}
+	return 0;
+}

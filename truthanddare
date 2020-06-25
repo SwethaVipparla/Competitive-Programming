@@ -1,0 +1,53 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    ll t;
+    cin >> t;
+    while(t--)
+    {
+        ll tr, dr, i;
+        cin >> tr;
+        ll arrt[tr];
+        for(i = 0; i < tr; i++)
+            cin >> arrt[i];
+        cin >> dr;
+        ll arrd[dr];
+        for(i = 0; i < dr; i++)
+        cin >> arrd[i];
+        ll st, sd;
+        cin >> st;
+        ll arrs[st];
+        for(i = 0; i < st; i++)
+        cin >> arrs[i];
+        cin >> sd;
+        ll arrsd[sd];
+        for(i = 0; i < sd; i++)
+        cin >> arrsd[i];
+        bool flag1 = true, flag2 = true;
+        for(i = 0; i < st; i++)
+        {
+            if(count(arrt, arrt + tr, arrs[i]) == 0)
+            {
+                flag1 = false;
+                break;
+            }
+        }
+        for(i = 0; i < sd; i++)
+        {
+            if(count(arrd , arrd + dr, arrsd[i]) == 0)
+            {
+                flag2 = false;
+                break;
+            }
+        }
+        if(flag1 & flag2)
+            cout << "yes\n";
+        else
+            cout << "no\n";
+    }
+}

@@ -1,3 +1,15 @@
+/*
+Oleg's favorite subjects are History and Math, and his favorite branch of mathematics is division.
+
+To improve his division skills, Oleg came up with t pairs of integers pi and qi and for each pair decided to find the greatest integer xi, such that:
+
+pi is divisible by xi;
+xi is not divisible by qi.
+Oleg is really good at division and managed to find all the answers quickly, how about you?
+*/
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
